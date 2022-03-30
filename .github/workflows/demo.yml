@@ -4,10 +4,10 @@ jobs:
   create_issue:
     runs-on: ubuntu-latest
     permissions:
-    issues: write 
+      issues: write 
     steps:
       - uses: actions/checkout@v2
       - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh issue create --title "This is an example issue" --body "Hey I have just been created using github actions. 🤸‍♀️"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh issue create --title "This is an example issue" --body "Hey I have just been created using github actions. 🤸‍♀️"
