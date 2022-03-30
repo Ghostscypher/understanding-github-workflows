@@ -1,13 +1,12 @@
 name: GitHub Actions Demo
 on: [push]
 permissions:
-  issues: write 
+  issues: write
 
-jobs:      
+jobs:
   create_issue:
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
