@@ -9,8 +9,9 @@ env:
 jobs:
   create_issue:
     steps:
-      name: checkout
-      uses: actions/checkout@v2
-      name: post issue
+      - name: checkout
+      - uses: actions/checkout@v2
+      
+      - name: post issue
       run: |
         gh issue create --title "This is an example issue" --body "Hey I have just been created using github actions. 🤸‍♀️"
