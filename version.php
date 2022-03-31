@@ -25,5 +25,5 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_staffmanager';
-$plugin->version   = 2021052100;
-$plugin->requires  = 2021051100;
+$plugin->version = 2021052100;
+$plugin->requires = 2021051100;

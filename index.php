@@ -54,17 +54,18 @@ $sql = sprintf(
     AND grades_table.finalgrade > 0 
     AND grades_table.timemodified >= '%s'
     AND grades_table.timemodified <= '%s'",
-    $start, $end
+    $start,
+    $end
 );
 
 $graders = $DB->get_records_sql($sql);
 
-foreach($graders as $key => $grader){
-    $graders[$key] = $DB->get_record('user', ['id' => $grader->graderid], 'firstname', 'lastname', 'email'); 
+foreach ($graders as $key => $grader) {
+    $graders[$key] = $DB->get_record('user', ['id' => $grader->graderid], 'firstname', 'lastname', 'email');
 }
 
 $results = new stdClass();
-$results->data = array_values($graders); // NOTE: Very important to remember convert the values 
+$results->data = array_values($graders); // NOTE: Very important to remember convert the values
                                         // of query results to array
 
 echo $OUTPUT->header();

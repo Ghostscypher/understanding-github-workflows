@@ -31,8 +31,10 @@ defined('MOODLE_INTERNAL') || die();
  * @copyright   2017 Matt Porritt <mattp@catalyst-au.net>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class local_staffmanager_base_testcase extends advanced_testcase {
-   public function test_dummy(){
-       $this->assertTrue(true);
-   }
+class local_staffmanager_base_testcase extends advanced_testcase
+{
+    public function test_dummy()
+    {
+        $this->assertTrue(true);
+    }
 }
